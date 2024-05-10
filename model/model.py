@@ -55,3 +55,8 @@ y_pred_gini = dt_clf_gini.predict(X_test)
  
 print ("Decision Tree using Gini Index\nAccuracy is ",
              accuracy_score(y_test, y_pred_gini)*100 )
+
+import pickle
+
+with open('model.pkl', 'wb') as file:
+    pickle.dump(dt_clf_gini, file)
